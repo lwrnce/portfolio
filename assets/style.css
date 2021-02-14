@@ -18,14 +18,6 @@ section {
     --light-black: #2e2c2caf;
     --bggradient: linear-gradient(45DEG, #ffcce7, #81b7d2, #4d5198);
     --light-gray: rgba(255, 255, 255, 0.877);
-    --goldgradient: linear-gradient(to right,
-            #462523 0,
-            #cb9b51 22%,
-            #f6e27a 45%,
-            #f6f2c0 50%,
-            #f6e27a 55%,
-            #cb9b51 78%,
-            #462523 100%);
     --azur: linear-gradient(to right, #44d3c9, #3d70cf, #3636b9);
     --smboxgradient: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
 
@@ -67,6 +59,15 @@ header .navbar-brand {
 
 header .nav-link:hover {
     color: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 9999;
+    transition: all 1.5s ease;
 }
 
 /*Dropdown Contacts START*/
@@ -328,48 +329,66 @@ header .container .col-md-7 p {
 /********** section 1 **************/
 
 .section-1 {
-    padding: 20vmin 0vmin;
+    padding: 5vmin;
 }
 
-.section-1 .row .col-md-6 .pray img {
-    opacity: 0.8;
-    width: 80%;
-    border-radius: 0.2em;
-}
-
-.section-1 .row .col-md-6:last-child {
+.section-1 .row .panel {
     position: relative;
-}
-
-.section-1 .row .col-md-6 .panel {
-    position: absolute;
-    top: 7vmin;
-    left: -18vmin;
     background: white;
     border-radius: 3px;
-    text-align: left;
-    padding: 13vmin 5vmin 20vmin 10vmin;
+    text-align: center;
+    padding: 10vmin;
     box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
     font-family: var(--Rubik);
     z-index: 1;
 }
 
-.section-1 .row .col-md-6 .panel h1 {
+.section-1 .row .panel h1 {
     font-weight: bold;
     padding: 0.4em 0;
     font-size: 2em;
 }
 
-.section-1 .row .col-md-6 .panel p {
+.section-1 .row .panel p {
     font-size: 0.9em;
     color: rgba(0, 0, 0, 0.5);
 }
 
-/********** section 2 **************/
+/********** section 2 START **************/
+.section-2 {
+    background: var(--azur);
+}
 
-/********** section 3 **************/
+.section-2 .row {
+    margin: 8px -16px;
+}
 
-/* Section 4 */
+/* Add padding BETWEEN each column */
+.section-2 .row,
+.section-2 .row>.section-2 .row .col-md-3 {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.section-2 .row .col-md-3 {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+.section-2 .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.section-2 .row .col-md-3 .project-img {
+    background: var(--light-black);
+    padding: 10px;
+}
+
+/********** section 2 END   **************/
 
 footer {
     background: rgba(0, 0, 0, 0.815);
@@ -403,13 +422,3 @@ footer .column i {
 footer .column i+i {
     padding: 0 0.5em;
 }
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    z-index: 9999;
-    transition: all 1.5s ease;
-}
-
