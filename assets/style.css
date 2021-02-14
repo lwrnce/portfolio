@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Poiret+One|Roboto");
+
+* {
+    box-sizing: border-box;
+}
+
+header,
+section {
+    overflow-x: hidden;
+}
+
+:root {
+    --Poiret-font: "Poiret One", cursive;
+    --Rubik: "Rubik", cursive;
+    --Patua: "Patua One", cursive;
+    --Lobster: "lobster", cursive;
+    --Roboto: "Roboto", cursive;
+    --light-black: #2e2c2caf;
+    --bggradient: linear-gradient(45DEG, #ffcce7, #81b7d2, #4d5198);
+    --light-gray: rgba(255, 255, 255, 0.877);
+    --goldgradient: linear-gradient(to right,
+            #462523 0,
+            #cb9b51 22%,
+            #f6e27a 45%,
+            #f6f2c0 50%,
+            #f6e27a 55%,
+            #cb9b51 78%,
+            #462523 100%);
+    --azur: linear-gradient(to right, #44d3c9, #3d70cf, #3636b9);
+    --smboxgradient: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+
+}
+
+header a {
+    font-family: var(--Poiret-font);
+    font-size: 1.25em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: whitesmoke;
+}
+
+.navbar-toggler {
+    margin-top: -2.4em;
+    margin-left: -1em;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+header .nav-item:last-child {
+    padding-right: 3em;
+}
+
+header .nav-item {
+    padding: 0.9em;
+}
+
+header .navbar-brand {
+    padding-left: 3em;
+    padding-top: 0.6em;
+    padding-right: 1em;
+}
+
+header .nav-link:hover {
+    color: black;
+}
+
+/*Dropdown Contacts START*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    right: 0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    font-size: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*Dropdown Contacts END*/
+/* NavBar END*/
+
+header .row .col-md-7 {
+    padding: 22vmin 1vmin;
+    padding-bottom: 35vmin;
+}
+
+header .row .col-md-5 {
+    padding: 4.2vmin 1vmin;
+}
+
+header .row .col-md-5 img {
+    width: 90%;
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 10px;
+    box-shadow: 10px 10px 8px #252525;
+    margin-top: 2em;
+}
+
+/** Social Media links START*/
+
+header .smbox {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-flex;
+    padding: 10px 0px 0px 18px;
+    background: var(--smboxgradient);
+    border-radius: 40px;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+
+.smbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    height: 200px;
+    width: 190px;
+    background: var(--azur);
+    transition: transform 700ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.smbox:hover::before,
+.smbox:focus::before {
+    transform: scaleX(2);
+}
+
+.smbox {
+    z-index: 1;
+    overflow: hidden;
+}
+
+.social {
+    font-family: var(--Poiret-font);
+    font-size: 30px;
+    padding: 0 15px 0 0;
+    color: var(--light-black);
+}
+
+.sm {
+    display: none;
+    list-style-type: none;
+    padding: 0px 0 5px 12px;
+    margin: 0px 25px 0px -25px;
+}
+
+.smbox:hover .social {
+    transition: color 350ms ease-in-out;
+    color: whitesmoke;
+}
+
+.smbox:hover .sm {
+    display: inline-flex;
+    position: relative;
+    font-size: 20px;
+}
+
+.smlink {
+    margin-left: 15px;
+}
+
+.fa-facebook:hover {
+    background: linear-gradient(45deg, #fbeee6, #ffe5d8, #ffcad4, #f3abb6);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-github:hover {
+    background: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-instagram:hover {
+    background: linear-gradient(45deg, #eca960, #e68f6f, #da566a, #ca5081, #c01f8d);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-linkedin:hover {
+    background: linear-gradient(45deg, #56c596, #7be495, #cff4d2);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Moving Letters from Tobias Ahlin Bjerrome */
+
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.ml10 {
+    position: relative;
+    font-weight: 700;
+    font-size: 1em;
+    word-spacing: 6px;
+    overflow-wrap: break-word;
+}
+
+.ml10 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml10 .letter2 {
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
+}
+
+/** Hover pulse grow */
+@-webkit-keyframes hvr-pulse-grow {
+    to {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+@keyframes hvr-pulse-grow {
+    to {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+.hvr-pulse-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-pulse-grow:hover,
+.hvr-pulse-grow:focus,
+.hvr-pulse-grow:active {
+    -webkit-animation-name: hvr-pulse-grow;
+    animation-name: hvr-pulse-grow;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+/**Social Media links END*/
+
+header {
+    background: #dfabd8;
+    /* fallback for old browsers */
+    background: var(--bggradient);
+}
+
+header .container .col-md-7 {
+    font-family: var(--Poiret-font);
+}
+
+header .container .col-md-7 h6 {
+    padding: 1vmin;
+    letter-spacing: 4px;
+}
+
+header .container .col-md-7 h1 {
+    font-size: 8.5vmin;
+    font-weight: bold;
+    padding: 0.1em 0em;
+}
+
+header .container .col-md-7 p {
+    padding: 1vmin 5vmin;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/********** section 1 **************/
+
+.section-1 {
+    padding: 20vmin 0vmin;
+}
+
+.section-1 .row .col-md-6 .pray img {
+    opacity: 0.8;
+    width: 80%;
+    border-radius: 0.2em;
+}
+
+.section-1 .row .col-md-6:last-child {
+    position: relative;
+}
+
+.section-1 .row .col-md-6 .panel {
+    position: absolute;
+    top: 7vmin;
+    left: -18vmin;
+    background: white;
+    border-radius: 3px;
+    text-align: left;
+    padding: 13vmin 5vmin 20vmin 10vmin;
+    box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+    font-family: var(--Rubik);
+    z-index: 1;
+}
+
+.section-1 .row .col-md-6 .panel h1 {
+    font-weight: bold;
+    padding: 0.4em 0;
+    font-size: 2em;
+}
+
+.section-1 .row .col-md-6 .panel p {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/********** section 2 **************/
+
+/********** section 3 **************/
+
+/* Section 4 */
+
+footer {
+    background: rgba(0, 0, 0, 0.815);
+    overflow-x: hidden;
+    padding: 14vmin 18vmin;
+}
+
+footer p>span {
+    color: #ff512f;
+}
+
+footer input {
+    border: none !important;
+}
+
+footer input::placeholder {
+    color: white !important;
+}
+
+footer .input-group .input-group-text {
+    background: var(--bggradient);
+    border: none;
+}
+
+footer .column i {
+    color: #dd2476;
+}
+
+/* It is Adjacent sibling combinator */
+
+footer .column i+i {
+    padding: 0 0.5em;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 9999;
+    transition: all 1.5s ease;
+}
+
