@@ -359,6 +359,12 @@ header .container .col-md-7 p {
     background: var(--azur);
 }
 
+.section-2 .section-title {
+    text-align: center;
+    font-family: var(--Rubik);
+    width: 100%;
+}
+
 .section-2 .row {
     margin: 8px -16px;
 }
@@ -367,6 +373,13 @@ header .container .col-md-7 p {
 .section-2 .row,
 .section-2 .row>.section-2 .row .col-md-3 {
     padding: 8px;
+}
+
+.section-2 .row .col-md-12 {
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
 }
 
 /* Create four equal columns that floats next to each other */
@@ -383,9 +396,26 @@ header .container .col-md-7 p {
 }
 
 /* Content */
-.section-2 .row .col-md-3 .project-img {
-    background: var(--light-black);
+.section-2 .project-img {
+    object-fit: cover;
+    overflow: hidden;
     padding: 10px;
+}
+
+.onhover img:hover {
+    opacity: .5;
+    webkit-filter: blur(4px);
+    filter: blur(4px);
+    overflow: hidden;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: whitesmoke;
+    padding: 5px 20px 0 20px;
 }
 
 /********** section 2 END   **************/
@@ -393,32 +423,9 @@ header .container .col-md-7 p {
 footer {
     background: rgba(0, 0, 0, 0.815);
     overflow-x: hidden;
-    padding: 14vmin 18vmin;
+    padding: 5vmin;
 }
 
-footer p>span {
-    color: #ff512f;
-}
-
-footer input {
-    border: none !important;
-}
-
-footer input::placeholder {
-    color: white !important;
-}
-
-footer .input-group .input-group-text {
-    background: var(--bggradient);
-    border: none;
-}
-
-footer .column i {
-    color: #dd2476;
-}
-
-/* It is Adjacent sibling combinator */
-
-footer .column i+i {
-    padding: 0 0.5em;
+footer .copyright {
+    font-size: 12px;
 }
